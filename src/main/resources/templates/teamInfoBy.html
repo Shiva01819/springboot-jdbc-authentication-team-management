@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Team info</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- Absolute path. It always starts from the root. -->
+	<link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
+</head>
+<body>
+
+<div align="right">
+<a href="/logout" >Logout ?</a>
+</div>
+	<div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Team information</h1>
+            <!--  enctype="application/json"  -->
+            <form class="form-horizontal" th:action="@{/IPL2022/teamById}" method="get">
+            	<fieldset>
+            	   	<div class="form-group">
+	                    <label class="col-lg-2 control-label">Team Id</label>
+	                    <div class="col-lg-6">
+	                    	<input type="text" class="form-control" name="tId"/> <!-- Model-View binding  -->
+	                    </div>
+                	</div>
+                	<div class="form-group">
+                	<button type="submit" class="btn btn-default">
+                	Get team</button> &nbsp;&nbsp;
+                	<button type="reset" class="btn btn-default">
+                	Reset</button> &nbsp;&nbsp;
+                	</div>
+            	</fieldset>
+            </form>
+            <form class="form-horizontal" th:action="@{/IPL2022/teamByName}" method="get">
+            	<fieldset>
+            	   	<div class="form-group">
+	                    <label class="col-lg-2 control-label">Team Name</label>
+	                    <div class="col-lg-6">
+	                    	<input type="text" class="form-control" name="tName"/> <!-- Model-View binding  -->
+	                    </div>
+                	</div>
+                	<div class="form-group">
+                	<button type="submit" class="btn btn-default">
+                	Get team</button> &nbsp;&nbsp;
+                	<button type="reset" class="btn btn-default">
+                	Reset</button> &nbsp;&nbsp;
+                	</div>
+            	</fieldset>
+            </form>
+			<a href="/IPL2022/" class="btn">Home</a><br/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+</body>
+</html>

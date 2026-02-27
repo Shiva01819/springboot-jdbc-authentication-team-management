@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Team info</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- Absolute path. It always starts from the root. -->
+	<link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
+</head>
+<body>
+
+<div align="right">
+<a href="/logout" >Logout ?</a>
+</div>
+	<div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Team information</h1>
+			<label><b>Team ID</b></label>&nbsp;&nbsp;<span th:text="${team.teamId}"></span><br>
+			<label><b>Team name</b></label>&nbsp;&nbsp;<span th:text="${team.teamName}"></span><br>
+			<label><b>Base location</b></label>&nbsp;&nbsp;<span th:text="${team.homeCity}"></span><br>
+			<a href="/IPL2022/" class="btn">Home</a>&nbsp;&nbsp;
+			<a href="http://localhost:9080/IPL2022/get">Team info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+</body>
+</html>

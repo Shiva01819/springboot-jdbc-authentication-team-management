@@ -1,0 +1,51 @@
+<!DOCTYPE HTML >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Teams</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
+</head>
+<body>
+	<div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Team</h1>
+            <!-- View-Controller binding -->
+            <form class="form-horizontal" th:action="@{/IPL2022/add}" method="post" enctype="application/x-www-form-urlencoded" >
+            	<fieldset>
+            	   	<div class="form-group">
+	                    <label class="col-lg-2 control-label">Team Id</label>
+	                    <div class="col-lg-6">
+	                    	<input type="text" class="form-control" th:value="${team.teamId}" name="teamId"/> <!-- Model-View binding  -->
+	                    </div>
+                	</div>
+            	
+            		<div class="form-group">
+	                    <label class="col-lg-2 control-label">Team Name</label>
+	                    <div class="col-lg-6">
+	                    	<input type="text" class="form-control" th:value="${team.teamName}" name="teamName"/>
+	                    </div>
+                	</div>
+            		<div class="form-group">
+	                    <label class="col-lg-2 control-label">Home City</label>
+	                    <div class="col-lg-6">
+	                    	<input type="text" class="form-control" th:value="${team.homeCity}" name="homeCity"/>
+	                    </div>
+                	</div>
+                	<div class="form-group">
+                	<button type="submit" class="btn btn-default">
+                	Add Team</button> &nbsp;&nbsp;
+                	<button type="reset" class="btn btn-default">
+                	Reset</button> &nbsp;&nbsp;
+                	<a href="/IPL2022/" class="btn-default">Home</a><br/>
+                	</div>
+            	</fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+	</div>
+</body>
+</html>
